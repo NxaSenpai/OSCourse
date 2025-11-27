@@ -210,3 +210,38 @@ ls
 ls
 cd LAB4
 ls
+git init
+clear
+ls
+git init
+ls
+git remote add origin https://github.com/NxaSenpai/OSCourse.git
+git checkout
+git checkout -b
+git checkout -b main
+git add .
+git commit -m "Initial Commit"
+clear
+ls
+git add LAB03 lab2 LAB4
+git commit -m "Initial Commit"
+git config --global user.email "nxasenpai007@gmail.com"
+git config --global user.name "NxaSenpai"
+git commit -m "Initial Commit"
+git push
+git push --set-upstream origin main
+ls
+git checkout
+exit
+ls
+cd lab2
+ls
+tree
+exit
+ls
+pwd
+exit
+ls
+cd Class_Activity_3/
+git add .
+git commit "Add Class_Activity_3"
