@@ -1,0 +1,10 @@
+│ 441 │ ls                                                                                                                                                                         │
+│ 442 │ ^grep "department:IT" lab4/challenge2/data/employees.txt > lab4/challenge2/results/task1_IT_staff.txt                                                                      │
+│ 443 │ clear                                                                                                                                                                      │
+│ 444 │ ^grep "department:IT" data/employees.txt out> results/task1_IT_staff.txt                                                                                                   │
+│ 445 │ tree                                                                                                                                                                       │
+│ 446 │ open results/task1_IT_staff.txt                                                                                                                                            │
+│ 447 │ history | tail -n 5 out> commands/task1_command.txt                                                                                                                        │
+├─────┼────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┤
+│   # │                                                                                  command                                                                                   │
+╰─────┴────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯

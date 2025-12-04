@@ -245,3 +245,27 @@ ls
 cd Class_Activity_3/
 git add .
 git commit "Add Class_Activity_3"
+ls
+git add .
+git commit -m "add act3"
+
+exit
+cd LAB4
+ls
+cd challenge1/
+ls
+cd challenge_log/
+ls
+cat access.log 
+clear
+cd ..
+
+ls
+cd challenge1/
+ls
+mkdir analysis
+ls
+rm -r LAB4
+ls
+tree
+exit

@@ -1,0 +1,15 @@
+│ 336 │ tree                                                                                          │
+│ 337 │ open analysis/task1_basic_stats.txt                                                           │
+│ 338 │ cd ..                                                                                         │
+│ 339 │ cd challenge1/                                                                                │
+│ 340 │ open original_log/access.log | lines | first 5 | save --append analysis/task1_basic_stats.txt │
+│ 341 │ open original_log/access.log | lines | last 5 | save --append analysis/task1_basic_stats.txt  │
+│ 342 │ open analysis/task1_basic_stats.txt                                                           │
+│ 343 │ history | tails -n 10 > command_used/task1_command.txt                                        │
+│ 344 │ history | tail -n 10 > command_used/task1_command.txt                                         │
+│ 345 │ echo "open original_log/access.log | lines | length                                           │
+│     │ open original_log/access.log | lines | first 5                                                │
+│     │ open original_log/access.log | lines | last 5" | save commands_used/task1_commands.txt        │
+├─────┼───────────────────────────────────────────────────────────────────────────────────────────────┤
+│   # │                                            command                                            │
+╰─────┴───────────────────────────────────────────────────────────────────────────────────────────────╯

@@ -1,0 +1,50 @@
+   37  sudo apt install gcc
+   38  ls
+   39  sudo passwd -S username
+   40  sudo apt install gcc
+   41  gcc syscall1.c -o syscall1
+   42  sudo apt install gcc
+   43  sudo apt update --fix-missing
+   44  gcc syscall1.c -o syscall1
+   45  sudo apt install gcc
+   46  gcc syscall1.c -o syscall1
+   47  ./systemcall1
+   48  ./syscall1
+   49  clear
+   50  ./syscall1
+   51  ls
+   52  ./syscall1
+   53  ls
+   54  touch result.txt
+   55  ls
+   56  tree
+   57  cd result.txt
+   58  ls
+   59  cd result.txt
+   60  cd /result.txt/
+   61  clear
+   62  nano result.txt
+   63  nano syscall1
+   64  nano syscall1.c
+   65  nano syscall1
+   66  ./syscall1
+   67  ls
+   68  cat result.txt
+   69  nano copyfilesyscall.c
+   70  gcc -o copyfilesyscall.c copyfilesyscall
+   71  ls
+   72  nano copyfilesyscall.c
+   73  ls
+   74  gcc -o copyfilesyscall.c copyfilesyscall
+   75  ls
+   76  nano copyfilesyscall.c
+   77  gcc copyfilesyscall.c -o copyfilesyscall
+   78  ./copyfilesyscall
+   79  ls
+   80  cat copyresult.txt
+   81  history | tail -n 50 > /home/kimheng/class_activity1/sysall_command_history.txt
+   82  ls
+   83  cat sysall_command_history.txt
+   84  rm sysall_command_history.txt
+   85  ls
+   86  history | tail -n 50 > /home/kimheng/class_activity1/syscall_command_history.txt

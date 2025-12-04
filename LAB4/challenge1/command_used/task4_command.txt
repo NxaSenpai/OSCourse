@@ -1,0 +1,50 @@
+│     │ | sort-by { $it | split " " | get 3 | parse-int } --reverse  # sort by count descending                                                    │
+│     │ | first 5                                                                                                                                  │
+│     │ | save analysis/task4_top_ips.txt                                                                                                          │
+│ 391 │ open original_log/access.log | lines | each { |line| ($line | split column " " | get column0) } | group-by | each { |row| $"IP:            │
+│     │ ($row.group), Requests: ($row.list | length)" } | sort-by { $it | split " " | get 3 | parse-int } --reverse | first 5 | save               │
+│     │ analysis/task4_top_ips.txt                                                                                                                 │
+│ 392 │ open original_log/access.log                                                                                                               │
+│     │ | lines                                                                                                                                    │
+│     │ | each { |line| ($line | split column " " | get column0) }  # get IPs                                                                      │
+│     │ | group-by  # table with columns: group (IP) + list (occurrences)                                                                          │
+│     │ | each { |row| { ip: $row.group, count: ($row.list | length) } }  # make a simple record                                                   │
+│     │ | sort-by count -r  # sort descending by count                                                                                             │
+│     │ | first 5                                                                                                                                  │
+│     │ | each { |row| $"IP: ($row.ip), Requests: ($row.count)" }  # format as string                                                              │
+│     │ | save analysis/task4_top_ips.txt                                                                                                          │
+│     │                                                                                                                                            │
+│ 393 │ open original_log/access.log                                                                                                               │
+│     │ | lines                                                                                                                                    │
+│     │ | each { |line| ($line | split column " " | get column0) }  # get IPs                                                                      │
+│     │ | group-by  # creates columns: key + values                                                                                                │
+│     │ | each { |row| { ip: $row.key, count: ($row.values | length) } }  # make a simple record                                                   │
+│     │ | sort-by count -r  # sort descending by count                                                                                             │
+│     │ | first 5                                                                                                                                  │
+│     │ | each { |row| $"IP: ($row.ip), Requests: ($row.count)" }  # format as string                                                              │
+│     │ | save analysis/task4_top_ips.txt                                                                                                          │
+│     │                                                                                                                                            │
+│ 394 │ clear                                                                                                                                      │
+│ 395 │ ^cut -d' ' -f1 original_log/access.log | ^sort | ^uniq -c | ^sort -nr | ^head -5 > analysis/task4_top_ips.txt                              │
+│ 396 │ ^cut -d' ' -f1 original_log/access.log | ^sort | ^uniq -c | ^sort -nr | ^head -5 out> analysis/task4_top_ips.txt                           │
+│ 397 │ tree                                                                                                                                       │
+│ 398 │ open analysis/task4_top_ips.txt                                                                                                            │
+│ 399 │ nano analysis/task4_top_ips.txt                                                                                                            │
+│ 400 │ ^cut -d' ' -f1 original_log/access.log | ^sort | ^uniq -c | ^sort -nr | ^head -5 out> analysis/attack_patterns.txt                         │
+│ 401 │ tree                                                                                                                                       │
+│ 402 │ ^cut -d'"' -f2 original_log/access.log | ^cut -d' ' -f2 | ^sort | ^uniq -c | ^sort -nr | ^head -10 out>> analysis/attack_patterns.txt      │
+│ 403 │ open analysis/                                                                                                                             │
+│ 404 │ open analysis/attack_patterns.txt                                                                                                          │
+│ 405 │ ^grep " 40[13] " original_log/access.log out> analysis/failed_logins.txt                                                                   │
+│ 406 │ tree                                                                                                                                       │
+│ 407 │ ^grep -iE "bot|scan|nmap|masscan" original_log/access.log out> analysis/suspicious_activity.txt                                            │
+│ 408 │ tree                                                                                                                                       │
+│ 409 │ open analysis/failed_logins.txt                                                                                                            │
+│ 410 │ open analysis/suspicious_activity.txt                                                                                                      │
+│ 411 │ history out> commands_used/task4_commands.txt                                                                                              │
+│ 412 │ history | tail -n 30 out> command_used/task4_command.txt                                                                                   │
+│ 413 │ tree                                                                                                                                       │
+│ 414 │ open command_used/task4_command.txt                                                                                                        │
+├─────┼────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┤
+│   # │                                                                  command                                                                   │
+╰─────┴────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯

@@ -1,0 +1,10 @@
+│ 356 │ tree                                                                                                                             │
+│ 357 │ open original_log/access.log | lines | where ($it =~ "(?i)bot" or $it =~ "(?i)scan") | save analysis/task3_suspicious_agents.txt │
+│ 358 │ tree                                                                                                                             │
+│ 359 │ history | tail -n 3 out> command_used/task3_command.txt                                                                          │
+│ 360 │ open command_used/task3_command.txt                                                                                              │
+│ 361 │ history | tail -n 5 out> command_used/task3_command.txt                                                                          │
+│ 362 │ open command_used/task3_command.txt                                                                                              │
+├─────┼──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┤
+│   # │                                                             command                                                              │
+╰─────┴──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
